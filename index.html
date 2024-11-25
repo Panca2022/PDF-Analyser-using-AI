@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Planet - Ask Questions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="navbar">
+            <div class="logo">
+                <img src="logo.jpg" alt="AI Planet Logo">
+                <h1>AI Planet</h1>
+            </div>
+            <label for="upload-pdf-btn" id="upload-pdf-label" class="upload-label">Upload PDF</label>
+            <input type="file" id="upload-pdf-btn" class="upload-btn" />
+        </header>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <!-- Answer Section -->
+            <div class="answer-box" id="answer-box">
+                <span id="response-text">Ask a question to see the response here!</span>
+            </div>
+        </main>
+
+        <!-- Question Input Section (Fixed at Bottom) -->
+        <div class="question-container">
+            <textarea id="message-input" class="message-input" placeholder="Enter your question here..." spellcheck="true"></textarea>
+            <button id="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal for Success/Error Message -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

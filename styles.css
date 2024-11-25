@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.upload-label {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn {
+    display: none; /* Hide the default file input */
+}
+
+.upload-label:hover {
+    background-color: #45a049;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the answer box vertically */
+    position: relative;
+}
+
+/* Answer Box */
+.answer-box {
+    max-width: 700px;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    text-align: center; /* Center-align text */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    min-height: 100px; /* Minimum height for the answer box */
+    white-space: pre-wrap; /* Preserve line breaks */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Question Input Section */
+.question-container {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 150px;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.message-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    z-index: 1; /* Ensure it's above other elements */
+    background-color: white; /* Ensure it’s not blending with background */
+}
+
+.message-input:focus {
+    border-color: #007bff;
+    background-color: #f9f9ff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#send-btn {
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#send-btn:hover {
+    background-color: #0056b3;
+}
+
+#send-btn i {
+    margin-left: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .answer-box {
+        width: 90%;
+    }
+
+    .question-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
